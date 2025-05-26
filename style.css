@@ -7,15 +7,16 @@
   
   body {
     font-family: "Segoe UI", sans-serif;
-   background-color: #8a8a8a;
-    color: #333;
+   background-color: #919191;
+    color: #4e4e4e;
     line-height: 1.6;
     padding-bottom: 50px;
   }
-  
+
+
   /* Navigation */
   header {
-    background-color: #bebebe;
+    background-color: #c7c7c7;
     padding: 1em 0;
   }
   
@@ -56,15 +57,19 @@
     margin: 2em auto;
     padding: 0 1em;
   }
-  
-  .card {
-    background-color: rgba(240, 240, 240, 0.781);
-    border-radius: 12px;
-    padding: 2em;
-    margin-bottom: 2em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
+
+.card {
+  background-color: #fefefe;
+  padding: 20px;
+  margin: 40px 0; /* espace vertical entre les cards */
+  border-radius: 10px;
+  box-shadow:
+    20px 10px 30px rgba(0, 0, 0, 0.25),  /* ombre principale vers la droite */
+    0 0 5px rgba(0, 0, 0, 0.05);         /* léger contour de profondeur */
+  transform: perspective(800px) rotateY(6deg); /* inclinaison 3D vers la droite */
+  transform-style: preserve-3d;
+}
+
   h1, h2 {
     margin-bottom: 1em;
     color: #2c3e50;
@@ -98,3 +103,57 @@
       padding: 1.5em;
     }
   }
+
+/* Bande invisible en haut pour détecter le survol */
+.menu-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 999;
+}
+
+/* Menu initialement caché au-dessus de l'écran */
+.hidden-menu {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #c7c7c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+/* Liens du menu */
+.hidden-menu ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden-menu ul li a {
+  color: #1d1d1d;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 0.5em;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hidden-menu ul li a:hover {
+  background-color: #838383;
+}
+
+/* Quand on survole le déclencheur ou le menu lui-même */
+.menu-trigger:hover + .hidden-menu,
+.hidden-menu:hover {
+  top: 0;
+}
