@@ -64,9 +64,8 @@
   margin: 40px 0; /* espace vertical entre les cards */
   border-radius: 10px;
   box-shadow:
-    20px 10px 30px rgba(0, 0, 0, 0.25),  /* ombre principale vers la droite */
+    26px 30px rgba(0, 0, 0, 0.25),  /* ombre principale vers la droite */
     0 0 5px rgba(0, 0, 0, 0.05);         /* léger contour de profondeur */
-  transform: perspective(800px) rotateY(6deg); /* inclinaison 3D vers la droite */
   transform-style: preserve-3d;
 }
 
