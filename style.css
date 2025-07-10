@@ -59,12 +59,12 @@
   }
 
 .card {
-  background-color: #fefefe;
+  background-color: #bd9797;
   padding: 20px;
   margin: 40px 0; /* espace vertical entre les cards */
   border-radius: 10px;
   box-shadow:
-    26px 30px rgba(0, 0, 0, 0.25),  /* ombre principale vers la droite */
+    26px 30px rgba(0, 0, 0, 0.384),  /* ombre principale vers la droite */
     0 0 5px rgba(0, 0, 0, 0.05);         /* léger contour de profondeur */
   transform-style: preserve-3d;
 }
@@ -167,4 +167,17 @@ h1 {
 .Deuxième {
   color: #0602fc;
   padding: 140px;
+}
+.Freecodecamp {
+  color:rgba(0, 0, 0, 0.966)
+   font-weight: bold;     /* Gras */
+  text-decoration: underline; /* Souligné */
+  color: #254725;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
 }

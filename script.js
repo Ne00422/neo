@@ -6,6 +6,6 @@ function highlight(id) {
     element.classList.add("highlight");
     setTimeout(() => {
       element.classList.remove("highlight");
-    }, 2000);
+    }, 1100);
   }
 }
